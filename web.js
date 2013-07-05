@@ -2,9 +2,12 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var err;
+var data;
+
 var fs = require("fs");
 fs.readFile('index.html','utf8', function(err,data) {
-	console.log(data);
+	//console.log(data);
 });
 
 app.get('/', function(request, response) {
